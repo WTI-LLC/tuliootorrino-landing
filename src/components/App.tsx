@@ -1,3 +1,4 @@
+import type React from 'react';
 import { LanguageProvider } from '../i18n/LanguageContext';
 import { WhatsAppProvider } from '../context/WhatsAppContext';
 import Header from './Header';
@@ -11,7 +12,7 @@ interface Props {
   whatsappNumber?: string;
 }
 
-const pages: Record<string, () => JSX.Element> = {
+const pages: Record<string, () => React.ReactElement> = {
   home: () => <HomeContent />,
   about: () => <AboutContent />,
   gallery: () => <GalleryContent />,

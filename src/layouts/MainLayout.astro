@@ -23,10 +23,19 @@ const currentPath = Astro.url.pathname; // Keep locale in path for hreflang
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
 
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <!-- SEO Meta Tags -->
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content="otorrinolaringologia, médico, consultas, cirurgias, ouvido, nariz, garganta, Dr. Túlio Kalife" />
+    <meta name="keywords" content={lang === 'en'
+      ? 'otorhinolaryngology, doctor, consultations, surgeries, ear, nose, throat, Dr. Túlio Kalife'
+      : lang === 'es'
+      ? 'otorrinolaringología, médico, consultas, cirugías, oído, nariz, garganta, Dr. Túlio Kalife'
+      : 'otorrinolaringologia, médico, consultas, cirurgias, ouvido, nariz, garganta, Dr. Túlio Kalife'
+    } />
     <link rel="canonical" href={canonicalURL} />
 
     <!-- Hreflang for Multilingual SEO -->
@@ -58,14 +67,14 @@ const currentPath = Astro.url.pathname; // Keep locale in path for hreflang
       "logo": "/images/logo/logo.png",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "R. Cap. José Vicente de Moraes, 151 - Esplanada Mendes - São Roque, SP", // Replace with actual address from translations
-        "addressLocality": "São Paulo",
+        "streetAddress": "R. Cap. José Vicente de Moraes, 151 - Esplanada Mendes",
+        "addressLocality": "São Roque",
         "addressRegion": "SP",
-        "postalCode": "01234-567",
+        "postalCode": "18130-780",
         "addressCountry": "BR"
       },
       "telephone": whatsappNumber,
-      "sameAs": ["https://www.tuliootorrino.com"] // Add social links
+      "sameAs": ["https://www.tuliootorrino.com"]
     })} />
 
     <!-- Apple Touch Icon -->

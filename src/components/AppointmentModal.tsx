@@ -73,7 +73,7 @@ export default function AppointmentModal({ isOpen, onClose }: Props) {
             <input
               id="apt-age"
               type="number"
-              min="0"
+              min="1"
               max="150"
               value={age}
               onChange={(e) => setAge(e.target.value)}
@@ -131,7 +131,7 @@ export default function AppointmentModal({ isOpen, onClose }: Props) {
           to { opacity: 1; }
         }
         .modal-content {
-          background: #fff;
+          background: var(--color-bg);
           border-radius: 12px;
           padding: 2rem;
           max-width: 480px;
@@ -161,7 +161,7 @@ export default function AppointmentModal({ isOpen, onClose }: Props) {
         }
         .modal-content h2 {
           font-size: 1.4rem;
-          color: #0f4d3f;
+          color: var(--color-primary-dark);
           margin-bottom: 0.25rem;
         }
         .modal-subtitle {
@@ -183,7 +183,7 @@ export default function AppointmentModal({ isOpen, onClose }: Props) {
         .form-group input {
           width: 100%;
           padding: 0.65rem 0.85rem;
-          border: 1px solid #e2e8f0;
+          border: 1px solid var(--color-border);
           border-radius: 8px;
           font-size: 0.95rem;
           font-family: inherit;
@@ -191,7 +191,7 @@ export default function AppointmentModal({ isOpen, onClose }: Props) {
           outline: none;
         }
         .form-group input:focus {
-          border-color: #1a6b5a;
+          border-color: var(--color-primary);
           box-shadow: 0 0 0 3px rgba(26, 107, 90, 0.1);
         }
         .form-row {

@@ -34,12 +34,12 @@ export default function LanguageSwitcher() {
           line-height: 1;
         }
         .lang-btn:hover {
-          border-color: #e2e8f0;
-          background: #f7fafc;
+          border-color: var(--color-border);
+          background: var(--color-bg-alt);
         }
         .lang-btn.active {
-          border-color: #1a6b5a;
-          background: #e8f5f1;
+          border-color: var(--color-primary);
+          background: var(--color-primary-light);
         }
         .lang-flag {
           font-size: 1.3rem;

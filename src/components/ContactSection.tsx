@@ -101,20 +101,8 @@ export default function ContactSection() {
         .contact h2 {
           font-size: 1.75rem;
           font-weight: 600;
-          color: #0f4d3f;
+          color: var(--color-primary-dark);
           margin-bottom: 1.5rem;
-          position: relative;
-          padding-bottom: 0.75rem;
-        }
-        .contact h2::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 50px;
-          height: 3px;
-          background-color: #c8a96e;
-          border-radius: 2px;
         }
         .contact-grid {
           display: grid;
@@ -126,10 +114,10 @@ export default function ContactSection() {
           display: flex;
           align-items: flex-start;
           gap: 0.85rem;
-          background: #f7fafc;
+          background: var(--color-bg-alt);
           padding: 1.25rem;
           border-radius: 8px;
-          border: 1px solid #e2e8f0;
+          border: 1px solid var(--color-border);
           transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         .contact-card:hover {
@@ -166,17 +154,17 @@ export default function ContactSection() {
           font-size: 0.8rem;
           text-transform: uppercase;
           letter-spacing: 0.05em;
-          color: #718096;
+          color: var(--color-text-light);
           margin-bottom: 0.25rem;
         }
         .contact-card p {
           margin: 0;
           font-size: 0.95rem;
-          color: #2d3748;
+          color: var(--color-text);
           line-height: 1.5;
         }
         .contact-card a {
-          color: #1a6b5a;
+          color: var(--color-primary);
           text-decoration: none;
           transition: color 0.2s;
         }

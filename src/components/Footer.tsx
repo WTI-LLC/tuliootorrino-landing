@@ -26,9 +26,9 @@ export default function Footer() {
       <style>{`
         .site-footer {
           padding: 2.5rem 2rem 1.5rem;
-          border-top: 1px solid #e2e8f0;
+          border-top: 1px solid var(--color-border);
           text-align: center;
-          background: #f7fafc;
+          background: var(--color-bg-alt);
         }
         .footer-content {
           max-width: 900px;
@@ -39,12 +39,12 @@ export default function Footer() {
         }
         .footer-brand {
           font-weight: 600;
-          color: #0f4d3f;
+          color: var(--color-primary-dark);
           font-size: 1rem;
           margin-bottom: 0.35rem;
         }
         .footer-address {
-          color: #718096;
+          color: var(--color-text-light);
           font-size: 0.85rem;
           margin-bottom: 0.25rem;
         }
@@ -52,7 +52,7 @@ export default function Footer() {
           font-size: 0.85rem;
         }
         .footer-phone a {
-          color: #1a6b5a;
+          color: var(--color-primary);
           text-decoration: none;
         }
         .footer-phone a:hover {
@@ -61,7 +61,7 @@ export default function Footer() {
         .footer-copy {
           color: #a0aec0;
           font-size: 0.8rem;
-          border-top: 1px solid #e2e8f0;
+          border-top: 1px solid var(--color-border);
           padding-top: 1rem;
           margin-top: 0;
         }

@@ -39,8 +39,8 @@ export default function Header() {
         <style>{`
           .site-header {
             padding: 1rem 2rem;
-            border-bottom: 1px solid #e2e8f0;
-            background: #ffffff;
+            border-bottom: 1px solid var(--color-border);
+            background: var(--color-bg);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -54,7 +54,7 @@ export default function Header() {
           }
           .site-logo {
             text-decoration: none;
-            color: #0f4d3f;
+            color: var(--color-primary-dark);
             font-size: 1.25rem;
             font-weight: 700;
             display: flex;
@@ -64,7 +64,7 @@ export default function Header() {
           .site-logo-sub {
             font-size: 0.7rem;
             font-weight: 400;
-            color: #718096;
+            color: var(--color-text-light);
             text-transform: uppercase;
             letter-spacing: 0.1em;
           }
@@ -82,16 +82,16 @@ export default function Header() {
           }
           .nav-links a {
             text-decoration: none;
-            color: #2d3748;
+            color: var(--color-text);
             font-weight: 500;
             font-size: 0.95rem;
             transition: color 0.2s ease;
           }
           .nav-links a:hover {
-            color: #1a6b5a;
+            color: var(--color-primary);
           }
           .btn-appointment {
-            background: #1a6b5a;
+            background: var(--color-primary);
             color: #fff;
             border: none;
             padding: 0.5rem 1.1rem;
@@ -107,7 +107,7 @@ export default function Header() {
             gap: 0.4rem;
           }
           .btn-appointment:hover {
-            background: #0f4d3f;
+            background: var(--color-primary-dark);
           }
           .btn-icon {
             width: 18px;
@@ -133,16 +133,6 @@ export default function Header() {
             background: #333;
             margin: 3px 0;
             transition: 0.3s;
-          }
-          .nav-right {
-            display: flex;
-            align-items: center;
-          }
-          .nav-links {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
           }
           @media (max-width: 768px) {
             .site-header { padding: 0.75rem 1.5rem; }

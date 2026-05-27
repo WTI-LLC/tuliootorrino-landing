@@ -1,5 +1,12 @@
 import { useLang } from '../i18n/LanguageContext';
 
+const TEAM_IMAGES = [
+  '/images/team/team-1.jpeg',
+  '/images/team/team-2.jpeg',
+  '/images/team/team-3.jpeg',
+  '/images/team/team-4.jpeg',
+];
+
 export default function AboutContent() {
   const { t } = useLang();
 
@@ -28,6 +35,18 @@ export default function AboutContent() {
             <p>{s.desc}</p>
           </div>
         ))}
+      </div>
+
+      <div className="team-section">
+        <h2>{t('about.team_title')}</h2>
+        <p className="team-subtitle">{t('about.team_subtitle')}</p>
+        <div className="team-grid">
+          {TEAM_IMAGES.map((src, i) => (
+            <div key={src} className="team-card">
+              <img src={src} alt={`Surgical team member ${i + 1}`} loading="lazy" />
+            </div>
+          ))}
+        </div>
       </div>
 
       <p className="about-text about-closing">{t('about.closing')}</p>
@@ -122,9 +141,63 @@ export default function AboutContent() {
           margin: 1rem auto;
           display: block;
         }
+
+        /* Surgical Team */
+        .team-section {
+          margin-top: 2rem;
+          padding-top: 2rem;
+          border-top: 1px solid #e2e8f0;
+        }
+        .team-section h2 {
+          font-size: 1.75rem;
+          font-weight: 600;
+          color: #0f4d3f;
+          margin-bottom: 0.35rem;
+          position: relative;
+          padding-bottom: 0.75rem;
+        }
+        .team-section h2::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 50px;
+          height: 3px;
+          background-color: #c8a96e;
+          border-radius: 2px;
+        }
+        .team-subtitle {
+          color: #718096;
+          font-size: 1rem;
+          margin-bottom: 1.5rem;
+        }
+        .team-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+          gap: 1rem;
+        }
+        .team-card {
+          border-radius: 8px;
+          overflow: hidden;
+          aspect-ratio: 3 / 4;
+          background: #e2e8f0;
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .team-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+        .team-card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
         @media (max-width: 768px) {
           .about-detail { padding: 3rem 1.5rem; }
           .specialties-grid { grid-template-columns: 1fr; }
+          .team-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
         }
       `}</style>
     </section>
