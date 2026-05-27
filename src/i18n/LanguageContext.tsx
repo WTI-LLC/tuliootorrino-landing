@@ -1,10 +1,12 @@
 import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
 import { translations, defaultLang, type Lang } from './translations';
 
+type TranslationKey = keyof typeof translations[typeof defaultLang];
+
 interface LanguageContextType {
   lang: Lang;
   setLang: (lang: Lang) => void;
-  t: (key: string) => string;
+  t: (key: TranslationKey) => string;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -25,7 +27,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     document.documentElement.lang = newLang;
   };
 
-  const t = (key: string): string => {
+  const t = (key: TranslationKey): string => {
     return translations[lang][key] ?? translations[defaultLang][key] ?? key;
   };
 

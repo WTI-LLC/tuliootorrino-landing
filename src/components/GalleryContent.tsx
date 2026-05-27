@@ -108,23 +108,11 @@ export default function GalleryContent() {
         .gallery h2 {
           font-size: 1.75rem;
           font-weight: 600;
-          color: #0f4d3f;
+          color: var(--color-primary-dark);
           margin-bottom: 0.5rem;
-          position: relative;
-          padding-bottom: 0.75rem;
-        }
-        .gallery h2::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 50px;
-          height: 3px;
-          background-color: #c8a96e;
-          border-radius: 2px;
         }
         .gallery-subtitle {
-          color: #718096;
+          color: var(--color-text-light);
           font-size: 1rem;
           margin-bottom: 2rem;
         }
@@ -141,7 +129,7 @@ export default function GalleryContent() {
           overflow: hidden;
           cursor: pointer;
           aspect-ratio: 4 / 3;
-          background: #e2e8f0;
+          background: var(--color-border);
         }
         .gallery-thumb img {
           width: 100%;

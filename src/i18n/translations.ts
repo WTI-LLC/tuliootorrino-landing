@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 export const languages = {
   pt: { label: 'Português', flag: '🇧🇷' },
   en: { label: 'English', flag: '🇺🇸' },
@@ -55,6 +53,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     'about.specialty3_title': 'Atraso de Desenvolvimento de Linguagem',
     'about.specialty3_desc': 'Atuação especializada no acompanhamento de crianças que apresentam dificuldades na fala, auxiliando no diagnóstico e na condução terapêutica multidisciplinar.',
     'about.closing': 'Pautado pela ética e pelo compromisso individualizado, o Dr. Túlio destaca-se pela clareza na condução de cada caso, orientando com transparência sobre as condutas necessárias para uma recuperação plena e o pleno desenvolvimento de seus pacientes.',
+    'about.team_title': 'Equipe Cirúrgica',
+    'about.team_subtitle': 'Conheça os profissionais que auxiliam o Dr. Túlio durante seus procedimentos cirúrgicos.',
 
     // Gallery
     'gallery.title': 'Galeria',
@@ -148,6 +148,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     'about.specialty3_title': 'Language Development Delay',
     'about.specialty3_desc': 'Specialized monitoring of children with speech difficulties, assisting in diagnosis and guiding multidisciplinary therapeutic approaches.',
     'about.closing': 'Guided by ethics and individualized commitment, Dr. Túlio stands out for his clarity in managing each case, providing transparent guidance on the steps necessary for a full recovery and the complete development of his patients.',
+    'about.team_title': 'Surgical Team',
+    'about.team_subtitle': 'Meet the professionals who assist Dr. Túlio during his surgical procedures.',
 
     // Gallery
     'gallery.title': 'Gallery',
@@ -241,6 +243,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     'about.specialty3_title': 'Retraso en el Desarrollo del Lenguaje',
     'about.specialty3_desc': 'Actuación especializada en el seguimiento de niños con dificultades en el habla, asistiendo en el diagnóstico y en la conducción terapéutica multidisciplinaria.',
     'about.closing': 'Guiado por la ética y el compromisso individualizado, el Dr. Túlio se destaca por la claridad en la conducción de cada caso, orientando con transparencia sobre las conductas necesarias para una recuperación plena y el completo desarrollo de sus pacientes.',
+    'about.team_title': 'Equipo Quirúrgico',
+    'about.team_subtitle': 'Conozca a los profesionales que asisten al Dr. Túlio durante sus procedimientos quirúrgicos.',
 
     // Gallery
     'gallery.title': 'Galería',
@@ -280,7 +284,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'contact.hours_label': 'Horario de Atención',
     'contact.hours': 'Consulte disponibilidad al agendar',
     'contact.whatsapp_label': 'WhatsApp',
-    'contact.whatsapp_greeting': "Hello! I'd like more information about Dr. Túlio Kalife's clinic.",
+    'contact.whatsapp_greeting': '¡Hola! Me gustaría recibir más información sobre la clínica del Dr. Túlio Kalife.',
     'about.read_more': 'Leer más',
 
     // Hospitals

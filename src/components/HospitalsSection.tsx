@@ -92,7 +92,7 @@ export default function HospitalsSection() {
       <style>{`
         .hospitals {
           padding: 4rem 2rem;
-          background: linear-gradient(180deg, #f7fafc 0%, #ffffff 100%);
+          background: linear-gradient(180deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
           max-width: 100%;
         }
         .hospitals h2 {
@@ -100,24 +100,12 @@ export default function HospitalsSection() {
           font-weight: 600;
           color: #0f4d3f;
           margin-bottom: 0.5rem;
-          position: relative;
-          padding-bottom: 0.75rem;
           max-width: 900px;
           margin-left: auto;
           margin-right: auto;
         }
-        .hospitals h2::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 50px;
-          height: 3px;
-          background-color: #c8a96e;
-          border-radius: 2px;
-        }
         .hospitals-subtitle {
-          color: #718096;
+          color: var(--color-text-light);
           font-size: 1rem;
           max-width: 900px;
           margin: 0 auto 2rem;
@@ -138,7 +126,7 @@ export default function HospitalsSection() {
           overflow: hidden;
           position: relative;
           aspect-ratio: 16 / 7;
-          background: #e2e8f0;
+          background: var(--color-border);
         }
         .slide {
           position: absolute;
@@ -234,7 +222,7 @@ export default function HospitalsSection() {
           margin: 1.25rem auto 0;
         }
         .hospital-chip {
-          background: #fff;
+          background: var(--color-bg);
           border: 1px solid #e2e8f0;
           border-radius: 20px;
           padding: 0.4rem 1rem;

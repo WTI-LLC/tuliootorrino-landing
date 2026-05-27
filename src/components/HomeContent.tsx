@@ -113,7 +113,7 @@ export default function HomeContent() {
         .service-item.spotlight {
           transform: translateY(-4px) scale(1.03);
           box-shadow: 0 8px 24px rgba(26, 107, 90, 0.15);
-          border-color: #1a6b5a;
+          border-color: var(--color-primary);
           color: #0f4d3f;
           font-weight: 600;
           z-index: 1;
@@ -151,7 +151,7 @@ export default function HomeContent() {
         }
 
         .hero-cta {
-          background: #3da661; /* Adjust color to match theme */
+          background: var(--color-primary);
           color: white;
           border: none;
           padding: 0.75rem 1.5rem;
@@ -162,7 +162,7 @@ export default function HomeContent() {
           transition: background 0.3s;
         }
         .hero-cta:hover {
-          background: #0056b3; /* Darker on hover */
+          background: #0f4d3f;
         }
 
         /* Tooltip */
@@ -212,16 +212,16 @@ export default function HomeContent() {
         .about-home-crm {
           display: inline-block;
           font-size: 0.85rem;
-          color: #718096;
+          color: var(--color-text-light);
           font-weight: 500;
-          background: #f7fafc;
+          background: var(--color-bg-alt);
           padding: 0.25rem 0.75rem;
           border-radius: 4px;
-          border: 1px solid #e2e8f0;
+          border: 1px solid var(--color-border);
         }
         .about-read-more {
           font-weight: 600;
-          color: #1a6b5a;
+          color: var(--color-primary);
           border-bottom: 2px solid #c8a96e;
           padding-bottom: 2px;
           transition: color 0.2s;
